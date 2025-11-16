@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cumin Flavor - Restaurant & Bar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">CUMIN FLAVOR</div>
+            <ul class="nav-menu">
+                <li><a href="#" data-section="home" class="nav-link active">Home</a></li>
+                <li><a href="#" data-section="menu" class="nav-link">Menu</a></li>
+                <li><a href="#" data-section="about" class="nav-link">About</a></li>
+                <li><a href="#" data-section="contact" class="nav-link">Contact</a></li>
+                <li><a href="#" data-section="catering" class="nav-link">Catering</a></li>
+                <li><a href="#" data-section="experiences" class="nav-link">Experiences</a></li>
+                <li><a href="#" data-section="more" class="nav-link">More</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Image Section -->
+    <div class="hero-section" id="heroSection">
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1920&q=80" alt="Cumin Flavor Restaurant" class="hero-image">
+        <div class="hero-content">
+            <h1>CUMIN FLAVOR</h1>
+            <p class="subtitle">Restaurant & Bar</p>
+            <button class="order-btn">Order Online</button>
+        </div>
+    </div>
+
+    <!-- Content Sections -->
+    <div class="content-wrapper">
+        <!-- Home Section -->
+        <section id="home" class="content-section active">
+            <div class="section-content">
+                <div class="home-intro">
+                    <h2>Crafted with love, enjoyed with joy</h2>
+                    <div class="intro-content">
+                        <div class="intro-text">
+                            <p>We offer a vibrant fusion of traditional Indian cuisine enriched with the distinctive flavors of the Himalayas. While our dishes remain true to their cultural roots, we take pride in sourcing most of our ingredients locally. Everything on our menu—from sauces and naans to desserts—is handcrafted in-house from scratch.</p>
+                            <p>Nepal's culinary heritage is diverse, with many dishes deeply rooted in local tradition, while others draw inspiration from neighboring India and China. Our Nepalese offerings reflect a carefully curated blend of both traditional and modern influences. Our Nepalese offerings reflect a carefully curated blend of both.</p>
+                            <button class="view-menu-btn">View Menu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="content-section">
+            <div class="section-content">
+                <h2>Our Menu</h2>
+                
+                <!-- Menu Tabs -->
+                <div class="menu-tabs">
+                    <button class="menu-tab active" data-tab="appetizers">Appetizers</button>
+                    <button class="menu-tab" data-tab="tandoori">Tandoori</button>
+                    <button class="menu-tab" data-tab="entrees">Entrees</button>
+                    <button class="menu-tab" data-tab="nepali-eats">Nepali Eats</button>
+                    <button class="menu-tab" data-tab="breads-rice">Breads & Rice</button>
+                    <button class="menu-tab" data-tab="desserts">Desserts</button>
+                    <button class="menu-tab" data-tab="beverages">Beverages</button>
+                </div>
+
+                <!-- Appetizers Tab Content -->
+                <div class="menu-tab-content active" id="appetizers">
+                <div class="menu-category">
+                    <h3>Appetizers</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Vegetable Samosa (2 pcs)</span>
+                            <span class="item-price">$5.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Samosa (2 pcs)</span>
+                            <span class="item-price">$6.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Vegetable Pakora</span>
+                            <span class="item-price">$6.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Pakora</span>
+                            <span class="item-price">$7.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Paneer Pakora</span>
+                            <span class="item-price">$7.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Tikka</span>
+                            <span class="item-price">$10.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Tandoori Wings (6 pcs)</span>
+                            <span class="item-price">$9.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Onion Bhaji</span>
+                            <span class="item-price">$5.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Aloo Tikki (2 pcs)</span>
+                            <span class="item-price">$6.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken 65</span>
+                            <span class="item-price">$10.99</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Tandoori Tab Content -->
+                <div class="menu-tab-content" id="tandoori">
+                <div class="menu-category">
+                    <h3>Tandoori</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Tandoori Chicken (Half)</span>
+                            <span class="item-price">$14.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Tandoori Chicken (Full)</span>
+                            <span class="item-price">$24.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Tikka Masala</span>
+                            <span class="item-price">$16.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Seekh Kebab (2 pcs)</span>
+                            <span class="item-price">$12.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Lamb Seekh Kebab (2 pcs)</span>
+                            <span class="item-price">$13.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Tandoori Shrimp</span>
+                            <span class="item-price">$18.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Tandoori Fish</span>
+                            <span class="item-price">$17.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Paneer Tikka</span>
+                            <span class="item-price">$13.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mixed Grill (Chicken, Lamb, Shrimp)</span>
+                            <span class="item-price">$22.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Tandoori Platter (For 2)</span>
+                            <span class="item-price">$39.99</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Entrees Tab Content -->
+                <div class="menu-tab-content" id="entrees">
+                <div class="menu-category">
+                    <h3>Entrees</h3>
+                    <div class="menu-subcategory">
+                        <h4>Chicken</h4>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <span class="item-name">Butter Chicken</span>
+                                <span class="item-price">$16.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Chicken Tikka Masala</span>
+                                <span class="item-price">$16.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Chicken Curry</span>
+                                <span class="item-price">$15.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Chicken Vindaloo</span>
+                                <span class="item-price">$16.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Chicken Korma</span>
+                                <span class="item-price">$16.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Chicken Saag</span>
+                                <span class="item-price">$16.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Chicken Biryani</span>
+                                <span class="item-price">$17.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Chicken 65</span>
+                                <span class="item-price">$16.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-subcategory">
+                        <h4>Lamb</h4>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <span class="item-name">Lamb Curry</span>
+                                <span class="item-price">$18.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Lamb Vindaloo</span>
+                                <span class="item-price">$18.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Lamb Korma</span>
+                                <span class="item-price">$18.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Lamb Saag</span>
+                                <span class="item-price">$18.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Lamb Biryani</span>
+                                <span class="item-price">$19.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Goat Curry</span>
+                                <span class="item-price">$19.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-subcategory">
+                        <h4>Seafood</h4>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <span class="item-name">Shrimp Curry</span>
+                                <span class="item-price">$18.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Shrimp Biryani</span>
+                                <span class="item-price">$19.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Fish Curry</span>
+                                <span class="item-price">$17.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Shrimp Vindaloo</span>
+                                <span class="item-price">$18.99</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-subcategory">
+                        <h4>Vegetarian</h4>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <span class="item-name">Paneer Tikka Masala</span>
+                                <span class="item-price">$15.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Paneer Butter Masala</span>
+                                <span class="item-price">$15.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Dal Makhani</span>
+                                <span class="item-price">$13.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Chana Masala</span>
+                                <span class="item-price">$13.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Aloo Gobi</span>
+                                <span class="item-price">$13.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Baingan Bharta</span>
+                                <span class="item-price">$13.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Vegetable Korma</span>
+                                <span class="item-price">$13.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Palak Paneer</span>
+                                <span class="item-price">$14.99</span>
+                            </div>
+                            <div class="menu-item">
+                                <span class="item-name">Malai Kofta</span>
+                                <span class="item-price">$14.99</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Nepali Eats Tab Content -->
+                <div class="menu-tab-content" id="nepali-eats">
+                <div class="menu-category">
+                    <h3>Nepali Eats</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Dal Bhat (Traditional Nepali Meal)</span>
+                            <span class="item-price">$14.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Dal Bhat</span>
+                            <span class="item-price">$16.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Lamb Dal Bhat</span>
+                            <span class="item-price">$18.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Momos (Steamed) - 6 pcs</span>
+                            <span class="item-price">$8.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Momos (Fried) - 6 pcs</span>
+                            <span class="item-price">$9.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Momos - 6 pcs</span>
+                            <span class="item-price">$9.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Buff Momos - 6 pcs</span>
+                            <span class="item-price">$10.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Thukpa (Noodle Soup)</span>
+                            <span class="item-price">$12.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Thukpa</span>
+                            <span class="item-price">$14.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Sekuwa (Grilled Meat)</span>
+                            <span class="item-price">$15.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chow Mein (Nepali Style)</span>
+                            <span class="item-price">$13.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Chicken Chow Mein</span>
+                            <span class="item-price">$15.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Aloo Tama (Potato & Bamboo Shoot)</span>
+                            <span class="item-price">$13.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Kwati (Mixed Bean Soup)</span>
+                            <span class="item-price">$12.99</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Breads & Rice Tab Content -->
+                <div class="menu-tab-content" id="breads-rice">
+                <div class="menu-category">
+                    <h3>Breads & Rice</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Plain Naan</span>
+                            <span class="item-price">$3.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Butter Naan</span>
+                            <span class="item-price">$4.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Garlic Naan</span>
+                            <span class="item-price">$5.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Cheese Naan</span>
+                            <span class="item-price">$6.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Peshawari Naan</span>
+                            <span class="item-price">$6.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Roti</span>
+                            <span class="item-price">$2.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Paratha</span>
+                            <span class="item-price">$4.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Basmati Rice</span>
+                            <span class="item-price">$4.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Jeera Rice</span>
+                            <span class="item-price">$5.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Biryani Rice</span>
+                            <span class="item-price">$5.99</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Desserts Tab Content -->
+                <div class="menu-tab-content" id="desserts">
+                <div class="menu-category">
+                    <h3>Desserts</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Gulab Jamun (2 pcs)</span>
+                            <span class="item-price">$5.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Kheer (Rice Pudding)</span>
+                            <span class="item-price">$5.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Rasmalai (2 pcs)</span>
+                            <span class="item-price">$6.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Kulfi</span>
+                            <span class="item-price">$4.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Gajar Halwa</span>
+                            <span class="item-price">$6.99</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Beverages Tab Content -->
+                <div class="menu-tab-content" id="beverages">
+                <div class="menu-category">
+                    <h3>Beverages</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="item-name">Mango Lassi</span>
+                            <span class="item-price">$4.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Sweet Lassi</span>
+                            <span class="item-price">$3.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Salted Lassi</span>
+                            <span class="item-price">$3.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Masala Chai</span>
+                            <span class="item-price">$3.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Mango Juice</span>
+                            <span class="item-price">$3.99</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="item-name">Fresh Lime Soda</span>
+                            <span class="item-price">$3.99</span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="section-content">
+                <h2>About Us</h2>
+                <p>Welcome to Cumin Flavor, where culinary traditions meet modern innovation. Our restaurant brings together the rich flavors of Indian and Nepalese cuisine, creating a unique dining experience that celebrates the diverse culinary heritage of the Himalayas.</p>
+                <p>Our chefs are passionate about preserving authentic recipes while incorporating fresh, locally-sourced ingredients. Every dish is prepared with care, from our handcrafted sauces to our freshly baked naans.</p>
+                <p>We believe that great food brings people together, and we're committed to providing an atmosphere where friends and family can gather to enjoy exceptional cuisine and create lasting memories.</p>
+                <div class="highlights">
+                    <div class="highlight-item">
+                        <h3>Fresh Ingredients</h3>
+                        <p>Locally sourced, always fresh</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Handcrafted</h3>
+                        <p>Everything made from scratch</p>
+                    </div>
+                    <div class="highlight-item">
+                        <h3>Authentic Flavors</h3>
+                        <p>Traditional recipes, modern presentation</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="content-section">
+            <div class="section-content">
+                <h2>Contact Us</h2>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>8216 Bedford Euless Rd.<br>North Richland Hills, TX 76180</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Opening Hours</h3>
+                        <p>Sun - Thur: 3pm - 12am<br>Fri - Sat: 3pm - 1am</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Get in Touch</h3>
+                        <p>Email: <a href="mailto:flavorcumin@gmail.com">flavorcumin@gmail.com</a><br>Phone: <a href="tel:8178492058">(817) 849-2058</a></p>
+                    </div>
+                </div>
+                <div class="reservation-section">
+                    <div class="reservation-image">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Wine Service" class="wine-image">
+                    </div>
+                    <div class="reservation-form">
+                        <h3>Reservation</h3>
+                        <h4>Request a Table</h4>
+                        <p class="reservation-subtitle">Select your details and we'll try to get the best seats for you.</p>
+                        <form id="reservationForm">
+                            <div class="form-group">
+                                <label for="partySize">Party size</label>
+                                <select id="partySize" name="partySize">
+                                    <option value="2">2 guests</option>
+                                    <option value="3">3 guests</option>
+                                    <option value="4">4 guests</option>
+                                    <option value="5">5 guests</option>
+                                    <option value="6">6+ guests</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Date</label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Time</label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                            <button type="submit" class="submit-btn">Request a Table</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link">TikTok</a>
+                    <a href="#" class="social-link">Facebook</a>
+                    <a href="#" class="social-link">Instagram</a>
+                    <a href="#" class="social-link">TripAdvisor</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catering Section -->
+        <section id="catering" class="content-section">
+            <div class="section-content">
+                <h2>Catering Services</h2>
+                <p>Make your next event memorable with Cumin Flavor's catering services. We bring the authentic flavors of Indian and Nepalese cuisine to your special occasions.</p>
+                <div class="catering-options">
+                    <div class="catering-option">
+                        <h3>Corporate Events</h3>
+                        <p>Perfect for business meetings, conferences, and corporate gatherings. We offer customizable menus to suit your needs.</p>
+                    </div>
+                    <div class="catering-option">
+                        <h3>Private Parties</h3>
+                        <p>Celebrate birthdays, anniversaries, and other special occasions with our delicious catering options.</p>
+                    </div>
+                    <div class="catering-option">
+                        <h3>Weddings</h3>
+                        <p>Make your wedding day extraordinary with our elegant and flavorful catering packages.</p>
+                    </div>
+                </div>
+                <p class="catering-contact">For catering inquiries, please contact us at <a href="mailto:flavorcumin@gmail.com">flavorcumin@gmail.com</a> or call <a href="tel:8178492058">(817) 849-2058</a></p>
+            </div>
+        </section>
+
+        <!-- Experiences Section -->
+        <section id="experiences" class="content-section">
+            <div class="section-content">
+                <h2>Dining Experiences</h2>
+                <p>At Cumin Flavor, we offer more than just a meal—we provide an immersive culinary experience.</p>
+                <div class="experience-list">
+                    <div class="experience-item">
+                        <h3>Chef's Table</h3>
+                        <p>Experience an intimate dining experience at our chef's table, where you can watch our chefs prepare your meal and learn about the techniques behind our dishes.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Wine Pairing Dinners</h3>
+                        <p>Join us for special wine pairing events where our culinary team creates menus designed to complement selected wines.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Cooking Classes</h3>
+                        <p>Learn to prepare authentic Indian and Nepalese dishes in our hands-on cooking classes. Perfect for food enthusiasts and groups.</p>
+                    </div>
+                    <div class="experience-item">
+                        <h3>Private Dining</h3>
+                        <p>Reserve our private dining area for exclusive events, business dinners, or intimate celebrations.</p>
+                    </div>
+                </div>
+                <p class="experience-contact">For more information about our dining experiences, please contact us at <a href="mailto:flavorcumin@gmail.com">flavorcumin@gmail.com</a></p>
+            </div>
+        </section>
+
+        <!-- More Section -->
+        <section id="more" class="content-section">
+            <div class="section-content">
+                <h2>More</h2>
+                <p>Explore more about Cumin Flavor. Check out our latest updates, special events, and more.</p>
+                <div class="more-content">
+                    <div class="more-item">
+                        <h3>Latest News</h3>
+                        <p>Stay updated with our latest menu additions, special events, and restaurant news.</p>
+                    </div>
+                    <div class="more-item">
+                        <h3>Special Offers</h3>
+                        <p>Discover our current promotions and special offers available throughout the week.</p>
+                    </div>
+                    <div class="more-item">
+                        <h3>Events</h3>
+                        <p>Join us for special events, live music, and themed dining experiences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
