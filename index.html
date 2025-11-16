@@ -40,6 +40,10 @@
                 <li><a href="#" data-section="experiences" class="nav-link">Experiences</a></li>
                 <li><a href="#" data-section="more" class="nav-link">More</a></li>
             </ul>
+            <button id="cartButton" class="cart-button" aria-label="Open cart">
+                <span>Cart</span>
+                <span id="cartCount" class="cart-count">0</span>
+            </button>
         </div>
     </nav>
 
@@ -651,6 +655,62 @@
                 </div>
             </div>
         </section>
+
+        <!-- Cart Drawer -->
+        <aside id="cartDrawer" class="cart-drawer" aria-hidden="true">
+            <div class="cart-header">
+                <h3>Your Order</h3>
+                <button id="closeCart" class="icon-btn" aria-label="Close cart">✕</button>
+            </div>
+            <div id="cartItems" class="cart-items"></div>
+            <div class="cart-controls">
+                <div class="order-type">
+                    <label><input type="radio" name="orderType" value="pickup" checked> Pickup</label>
+                    <label><input type="radio" name="orderType" value="delivery"> Delivery</label>
+                </div>
+                <div id="deliveryFields" class="delivery-fields" hidden>
+                    <input type="text" id="deliveryAddress" placeholder="Delivery address">
+                    <input type="text" id="deliveryInstructions" placeholder="Delivery instructions (optional)">
+                </div>
+                <div class="tip-section">
+                    <div class="tip-buttons">
+                        <button class="tip-btn" data-tip="0">No tip</button>
+                        <button class="tip-btn" data-tip="0.1">10%</button>
+                        <button class="tip-btn" data-tip="0.15">15%</button>
+                        <button class="tip-btn" data-tip="0.2">20%</button>
+                    </div>
+                    <div class="tip-custom">
+                        <label for="customTip">Custom tip ($)</label>
+                        <input type="number" id="customTip" min="0" step="0.01" placeholder="0.00">
+                    </div>
+                </div>
+                <button id="clearCart" class="clear-btn" type="button">Clear All</button>
+                <div class="totals">
+                    <div class="row"><span>Subtotal</span><span id="subtotalAmt">$0.00</span></div>
+                    <div class="row"><span>Delivery</span><span id="deliveryAmt">$0.00</span></div>
+                    <div class="row"><span>Tax (8.25%)</span><span id="taxAmt">$0.00</span></div>
+                    <div class="row"><span>Tip</span><span id="tipAmt">$0.00</span></div>
+                    <div class="row total"><span>Total</span><span id="totalAmt">$0.00</span></div>
+                </div>
+                <button id="checkoutBtn" class="checkout-btn">Checkout</button>
+            </div>
+        </aside>
+        
+        <!-- Quantity Picker Modal -->
+        <div id="qtyBackdrop" class="modal-backdrop" hidden>
+            <div class="quantity-modal" role="dialog" aria-modal="true" aria-labelledby="qtyTitle">
+                <h3 id="qtyTitle">Choose quantity</h3>
+                <div class="qty-picker">
+                    <button id="qtyMinus" class="qty-btn" aria-label="Decrease">−</button>
+                    <input id="qtyInput" type="number" min="1" step="1" value="1" aria-label="Quantity">
+                    <button id="qtyPlus" class="qty-btn" aria-label="Increase">+</button>
+                </div>
+                <div class="qty-actions">
+                    <button id="qtyCancel" class="icon-btn">Cancel</button>
+                    <button id="qtyConfirm" class="checkout-btn">Add to Cart</button>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="script.js"></script>
