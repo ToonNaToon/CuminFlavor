@@ -2,6 +2,16 @@ document.addEventListener('DOMContentLoaded', function() {
     const heroSection = document.getElementById('heroSection');
     const navLinks = document.querySelectorAll('.nav-link');
     const contentSections = document.querySelectorAll('.content-section');
+    const currentSectionSpan = document.querySelector('.current-section');
+    const sectionNames = {
+        'home': 'Home',
+        'menu': 'Menu',
+        'about': 'About',
+        'contact': 'Contact',
+        'catering': 'Catering',
+        'experiences': 'Experiences',
+        'more': 'More'
+    };
     
     // Handle navigation clicks
     navLinks.forEach(link => {
@@ -14,6 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
             navLinks.forEach(nav => nav.classList.remove('active'));
             // Add active class to clicked link
             this.classList.add('active');
+            
+            // Update mobile dropdown current section text
+            if (currentSectionSpan && sectionNames[targetSection]) {
+                currentSectionSpan.textContent = sectionNames[targetSection];
+            }
+            
+            // Close mobile dropdown if open
+            const mobileDropdown = document.querySelector('.mobile-dropdown');
+            const mobileToggle = document.querySelector('.mobile-menu-toggle');
+            if (mobileDropdown && mobileToggle) {
+                mobileDropdown.classList.remove('active');
+                mobileToggle.classList.remove('active');
+            }
             
             // If Home is clicked, expand hero section and show home content
             if (targetSection === 'home') {
@@ -121,30 +144,21 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Handle mobile menu toggle
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const mobileDropdown = document.querySelector('.mobile-dropdown');
     
-    if (mobileMenuToggle && navMenu) {
-        mobileMenuToggle.addEventListener('click', function() {
+    if (mobileMenuToggle && mobileDropdown) {
+        mobileMenuToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
             this.classList.toggle('active');
-            navMenu.classList.toggle('active');
-        });
-        
-        // Close mobile menu when a nav link is clicked
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                if (window.innerWidth <= 768) {
-                    mobileMenuToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                }
-            });
+            mobileDropdown.classList.toggle('active');
         });
         
         // Close mobile menu when clicking outside
         document.addEventListener('click', function(e) {
             if (window.innerWidth <= 768) {
-                if (!navMenu.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
+                if (!mobileDropdown.contains(e.target) && !mobileMenuToggle.contains(e.target)) {
                     mobileMenuToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
+                    mobileDropdown.classList.remove('active');
                 }
             }
         });

@@ -39,35 +39,51 @@ body {
     position: relative;
 }
 
-.mobile-menu-toggle {
+.mobile-menu-wrapper {
     display: none;
-    flex-direction: column;
-    background: transparent;
-    border: none;
+    position: relative;
+}
+
+.mobile-menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+    border: 2px solid #8B4513;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 0.5rem;
-    gap: 5px;
+    padding: 0.625rem 1rem;
+    min-width: 120px;
+    gap: 0.5rem;
     z-index: 1001;
-}
-
-.mobile-menu-toggle span {
-    width: 25px;
-    height: 3px;
-    background: #8B4513;
     transition: all 0.3s ease;
-    border-radius: 2px;
 }
 
-.mobile-menu-toggle.active span:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
+.mobile-menu-toggle:hover {
+    background: #f9f9f9;
 }
 
-.mobile-menu-toggle.active span:nth-child(2) {
-    opacity: 0;
+.mobile-menu-toggle.active {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
 }
 
-.mobile-menu-toggle.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+.mobile-menu-toggle .current-section {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #8B4513;
+    flex: 1;
+    text-align: left;
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+}
+
+.mobile-menu-toggle.active .dropdown-arrow {
+    transform: rotate(180deg);
 }
 
 .logo {
@@ -81,6 +97,14 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+}
+
+.desktop-menu {
+    display: flex;
+}
+
+.mobile-dropdown {
+    display: none;
 }
 
 .nav-link {
@@ -609,56 +633,66 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .mobile-menu-toggle {
-        display: flex;
+    .mobile-menu-wrapper {
+        display: block;
     }
 
-    .nav-menu {
-        position: fixed;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(10px);
-        flex-direction: row;
-        gap: 0;
-        padding: 0.75rem 1rem;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        white-space: nowrap;
-    }
-
-    .nav-menu::-webkit-scrollbar {
+    .desktop-menu {
         display: none;
     }
 
-    .nav-menu.active {
-        transform: translateX(0);
+    .mobile-dropdown {
+        position: absolute;
+        top: calc(100% + 2px);
+        right: 0;
+        width: 100%;
+        min-width: 200px;
+        background: white;
+        border: 2px solid #8B4513;
+        border-top: none;
+        border-radius: 0 0 5px 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        z-index: 1000;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
     }
 
-    .nav-menu li {
-        flex: 0 0 auto;
+    .mobile-dropdown.active {
+        max-height: 500px;
+        opacity: 1;
+    }
+
+    .mobile-dropdown li {
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .mobile-dropdown li:last-child {
         border-bottom: none;
-        border-right: 1px solid #f0f0f0;
     }
 
-    .nav-menu li:last-child {
-        border-right: none;
-    }
-
-    .nav-link {
-        padding: 0.875rem 1.25rem;
+    .mobile-dropdown .nav-link {
+        padding: 1rem 1.25rem;
         font-size: 0.95rem;
-        white-space: nowrap;
+        display: block;
+        width: 100%;
+        color: #333;
+        text-decoration: none;
+        transition: background-color 0.2s ease;
         min-height: 44px;
         display: flex;
         align-items: center;
+    }
+
+    .mobile-dropdown .nav-link:hover,
+    .mobile-dropdown .nav-link.active {
+        background-color: #f9f9f9;
+        color: #8B4513;
     }
 
     .logo {
