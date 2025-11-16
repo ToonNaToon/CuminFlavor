@@ -24,7 +24,7 @@ body {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('https://images.unsplash.com/photo-1496412705862-e0088f16f791?q=80&w=1920&auto=format&fit=crop');
+    background-image: url('images/Food.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -143,7 +143,7 @@ body {
 /* Hero Section */
 .hero-section {
     width: 100%;
-    height: 100vh;
+    height: clamp(300px, 55vh, 520px);
     position: relative;
     display: flex;
     align-items: center;
@@ -152,6 +152,7 @@ body {
     color: white;
     transition: height 0.5s ease, opacity 0.5s ease;
     overflow: hidden;
+    margin-bottom: 1.5rem;
 }
 
 .hero-image {
@@ -171,7 +172,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.45));
     z-index: 0;
 }
 
@@ -184,10 +185,11 @@ body {
     height: 0;
     opacity: 0;
     padding: 0;
+    margin-bottom: 0;
 }
 
 .hero-content h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
     letter-spacing: 4px;
 }
@@ -201,9 +203,9 @@ body {
 .order-btn {
     padding: 1rem 2.5rem;
     font-size: 1.1rem;
-    background: #8B4513;
-    color: white;
-    border: none;
+    background: transparent;
+    color: #8B4513;
+    border: 2px solid #8B4513;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
@@ -212,7 +214,8 @@ body {
 }
 
 .order-btn:hover {
-    background: #654321;
+    background: #8B4513;
+    color: #fff;
 }
 
 /* Content Wrapper */
@@ -651,6 +654,9 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-section {
+        height: clamp(220px, 42vh, 420px);
+    }
     .mobile-menu-wrapper {
         display: block;
     }
@@ -845,6 +851,7 @@ body {
         padding: 1rem;
         font-size: 1rem;
         min-height: 44px;
+        appearance: none;
         -webkit-appearance: none;
         border-radius: 0;
     }
