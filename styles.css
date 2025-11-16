@@ -1027,21 +1027,23 @@ body {
 
     .menu-item {
         padding: 1rem 0;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
         gap: 0.5rem;
+        flex-wrap: nowrap;
     }
 
     .item-name {
         font-size: 0.95rem;
-        width: 100%;
+        flex: 1 1 auto;
+        width: auto;
     }
 
     .item-price {
         font-size: 0.95rem;
-        text-align: left;
+        text-align: right;
         padding-left: 0;
-        min-width: auto;
+        min-width: 70px;
     }
 
     .menu-subcategory h4 {
