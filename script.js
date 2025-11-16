@@ -136,8 +136,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const targetContent = document.getElementById(targetTab);
             if (targetContent) {
                 targetContent.classList.add('active');
-                // Smooth scroll to top of menu section
-                targetContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Do not auto-scroll on tab change to avoid page jumping
             }
         });
     });
